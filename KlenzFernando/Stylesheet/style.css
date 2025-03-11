@@ -1,0 +1,19 @@
+h2{
+    color: black;
+}
+
+#copyrights {
+    color: white;
+
+}
+
+header{ background-color: rgb(2, 150, 2); height: 100%;}
+main{background-color:rgb(228, 226, 226) ;height: 100%;}
+nav{ background-color: whitesmoke;height: 100%;}
+section{background-color: whitesmoke;height: 100%;}
+footer{background-color: rgb(2, 150, 2); height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+

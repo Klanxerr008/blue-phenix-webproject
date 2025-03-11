@@ -1,0 +1,112 @@
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+header img {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+header span{
+    font-size: 24px;
+    font-weight: bold;
+}
+.comp{
+    color: white;
+    padding: 12px 16px;
+    display: block;
+}
+
+
+
+body{   
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+body span{ 
+    margin: 1%;
+}
+
+main{
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.image{justify-content: left;}
+
+
+    
+.Readmore{ 
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    
+}
+    
+
+form {
+    background-color: #f3f3f5  ;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    margin: 20px auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #2C3E50;
+    color: white;
+    
+}
+
+
+nav {
+    background-color: mediumturquoise;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ul li {
+    float: left;
+    display: inline;
+    padding: 14px 20px;
+}
+
+#con{float: left;}
+
+footer {
+    background-color: #2C3E50;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    font-size: 11px; 
+}
+
