@@ -4,9 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+        .header, .navigation, .banner, .banner section, .section2, .section3, .section, .section4, .section5, .section6 {
+            display: flex;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+       
+        .header {
+            height: 100px;
+            background-color: #043873;
+            padding: 16px 220px;
+            justify-content: space-between;
+            align-items: center;
+            color: aliceblue;
+        }
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navigation {
+            background-color: #043873;
+            height: 892px;
+            top: 92px;
+            padding: 140px 220px;
+        }
+        .banner {
+            height: 927px;
+            top: 921px;
+            padding: 140px 220px;
+        }
+        .dark {
+            background-color: #043873;
+            height: 800px;
+            color: white;
+        }
+        .section{
+            height: 759px;
+            top: 2509px;
+            padding: 140px 220px;
+        }
+        .section3 {
+            height: 600px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .section2 {
+            height: 800px;
+            top: 3268px;
+            padding: 140px 220px;
+            gap: 28px;
+        }
+        .section4 {
+            height: 661px;
+            top: 4582px;
+            left: 1px;
+            padding: 140px 220px;
+            gap: 30px;
+        }
+        .section5{
+            height: 538px;
+            top: 5781px;
+            padding: 140px 220px;
+            gap: 100;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .section6{
+            height: 800px;
+            top: 5781px;
+            padding: 140px 220px;
+            gap: 60px;
+
+        }
+        .image6{
+           
+            align-items: flex-start;
+            
+            gap: 30px;
+            padding: 140px 220px;
+            height: 470px;
+            width: 582px;
+            
+        }
+        .footer {
+            height: 150px;
+            background-color: #043873;
+            top: 6596px;
+            left: 1px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 30px;
+            
+        }
+
+        .image {
+            background-color: #C4DEFD;
+            gap: 4px;
+            padding: 20px;
+        }
+        .navigation .items {
+            flex: 1;
+            font-size: 20px;
+            padding: 20px;
+            
+        }
+        .banner .items {
+            flex: 1;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .white {
+            color: white;
+        }
+        .banner section {
+            flex: 1;
+            padding: 20px;
+        }
+        input[type="submit"]{
+            background-color: #4F9CF9;
+            height: 63px;
+            width: 219px;
+            border-radius: 30px;
+            
+        }
+        .header input{
+            background-color: #4F9CF9;
+            height: 25px;
+            width: 120px;
+            border-radius:  30%;
+        }
+    </style>
 </head>
 <body>
-        <h1>This will be upladed in GitHub</h1>
-        <h2>This will be Fetch in my Computer</h2>
+    <div class="header">
+        <div>White Space</div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+
+           
+            <input  type="submit" value="Login"> 
+            <input   type="submit" value="Register">
+
+        </nav>
+    </div>
+
+    <div class="navigation"> 
+        <div class="items white">
+            <h2>Get More Done with whitepace</h2>
+            <p>Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p> 
+            <input type="submit" value="Try Whitepace free">
+        </div>
+        <div class="items">  <img class="image" src="placehold.co/" height="549px" width="824px"> </div>
+    </div>
+
+    <div class="banner">
+        <div class="items">
+            <h2>Project Management</h2>
+            <p>Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note</p>
+            <input type="submit" value="Get started">
+            
+
+        </div>
+        
+        <div class="items"> <img class="image" src="placehold.co/" height="547px" width="748px"></div>
+    </div>
+    <div class="banner section">
+        <div><img class="image" src="placehold.co/" height="661px" width="710px"></div>
+        <div class="items">
+            <h2>Work together</h2>
+            <p>With whitepace, share your notes with your colleagues and collaborate on them.
+                You can also publish a note to the internet and share the URL with others.
+            </p>
+        </div>
+    </div>
+
+    <div class="section dark">
+        <div class="items">
+            <h2>Use as Extension</h2>
+        <p>Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.</p>
+        <input type="submit" value="Lets go ->">
+        </div>
+        <div class="items"> <img class="image" src="placehold.co/" height="479px" width="686px"></div>
+    </div>
+    <div class="section2">
+        <div>
+                <img class="image" src="placehold.co/" height="532px" width="714px" alt="">
+        </div>
+            <div class="items"> 
+                <h1>Customise it to your needs</h1>
+                <p>Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.</p>
+                <input type="submit" value="Lets Go ->"> 
+            </div>
+            
+        </div>
+    </div>
+    <div class="section3 dark">
+        <h1>Your work, everywhere you are</h1>
+        <p>Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace,Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
+        <input type="submit" value="Try Taskey ->">
+    </div>
+    <div class="section4">
+        <div class="items">
+            <h1>100% your data</h1>
+            <p>The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</p>
+            <input type="submit" value="Read more ->">
+        </div>
+        <div class="items">
+            <img src="placehold.co" height="381px" width="681px">
+        </div>
+   
+    </div>
+    <div class="section5">
+        <div class="items">
+            <h1>Our sponsors</h1>
+        </div>
+        <div>
+            <img src="placehold.co" height="68px" width="55px"> <img src="placehold.co" height="62px" width="287px"> <img src="placehold.co" height="71px" width="280px"> <img src="placehold.co" height="69px" width="211">
+        </div>
+    </div>
+    <div class="section6 dark">
+        <div class="image6">
+            <div><img src="placehold.co" height="72px" width="72px"></div>
+            <div><img src="placehold.co" height="72px" width="72px"> <img src="placehold.co" height="72px" width="72px"></div>
+            <div><img src="placehold.co" height="72px" width="72px"><img src="placehold.co" height="72px" width="72px"><img src="placehold.co" height="72px" width="72px"></div>
+            <div><img src="placehold.co" height="72px" width="72px"></div>
+        </div>
+        <div>
+            <h1>Work with Your Favorite Apps Using whitepace</h1>
+            <p>Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.</p>
+            <input type="submit" value="Read more ->">
+        </div>
+    </div>
+    
 </body>
+<footer class="footer dark">
+    <div>
+        <p>&copy; 2025 Environmental Bank | All Rights Reserved</p>
+    </div>
+</footer>
 </html>
