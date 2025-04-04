@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (width <=480px) {
+
+            body {
+                background-color: blue;
+            }
+
+            #container {
+                display: flex;
+                border: 1px solid red;
+                flex-flow: column wrap;
+            }
+            .items{
+                background-color: tomato;
+                flex:1;
+                
+            }
+
+        }
+
+        @media screen and (width>=481px) and (width <=768px) {
+
+            body {
+                background-color: black;
+                color: white;
+            }
+            #container {
+                display: flex;
+                border: 1px solid red;
+                flex-flow: row wrap;
+            }
+            .items{
+                background-color: tomato;
+                flex:1;
+            }
+
+        }
+
+        @media screen and (width >=769px) and (width <=1024px) {
+            body {
+                background-image: linear-gradient(to bottom, black, white);
+                background-repeat: no-repeat;
+                
+                
+            }
+            #container {
+                display: flex;
+                border: 1px solid red;
+                flex-flow: column wrap;
+            }
+            .items{
+                background-color: tomato;
+                flex:1;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, at excepturi? Qui est esse distinctio labore
+        tempora harum modi tempore dignissimos nam assumenda autem nesciunt, excepturi recusandae iure aliquam
+        voluptatum.</p>
+</body>
+
+</html>
