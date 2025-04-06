@@ -30,6 +30,7 @@
             z-index: 1000;
             color: white;
             height: 120px;
+            width: 100%;
 
         }
 
@@ -67,11 +68,9 @@
         section>.section {
 
             padding: 20px;
-
-
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
             align-items: center;
             text-align: center;
             width: 100%;
@@ -80,9 +79,20 @@
 
         .section img {
             width: 100%;
-            height: 300px;
+            height: 600px;
             object-fit: cover;
         }
+
+        .im {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
 
         .section-content {
             flex: 1;
@@ -104,8 +114,8 @@
         .search-container {
             position: relative;
             width: 700px;
-            
-         
+
+
         }
 
         .search {
@@ -113,7 +123,7 @@
             padding: 10px;
             height: 50px;
             font-size: 18px;
-          
+
         }
 
         .search-btn {
@@ -129,19 +139,33 @@
             border-radius: 5px;
         }
 
+        .card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+            color: black;
+           
+        }
+
         .search-btn:hover {
             background-color: #45a049;
         }
 
 
-        @media (min-width: 768px) {
-            .section {
-                flex-direction: row;
-                text-align: left;
+
+        @media (min-width: 376px) {
+            .title3 {
+                display: flex;
                 font-size: 20px;
                 color: white;
-                letter-spacing: 2px;
-                line-height: 40px;
+                gap: 40px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
             }
 
             .section.reverse {
@@ -176,11 +200,50 @@
 
         }
 
+        .button2 {
+            background-color: #2c2b2c;
+            color: white;
+            border: none;
+            width: 120px;
+            height: 56px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+
+        }
+
+        .button3 {
+            background-color: #2c2b2c;
+            color: white;
+            border: none;
+            width: 200px;
+            height: 56px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
 
 
+        }
 
+        .bot {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 40px;
+        }
 
         @media screen and (max-width: 375px) {
+            .section.reverse {
+                flex-direction: column-reverse;
+                font-size: 20px;
+                color: white;
+                letter-spacing: 2px;
+                line-height: 40px;
+                
+            }
+
             .navigation {
                 display: none;
                 flex-direction: column;
@@ -207,10 +270,7 @@
 <body>
     <header>
         <div class="logo"><img src="Assets/Image/ani.jpg"></div>
-        <div class="search-container">
-            <input class="search" type="text" value="Search Anime..." />
-            <button type="btn" class="search-btn">Filter</button>
-        </div>
+
         <nav>
             <div class="hamburger" onclick="ToggleMenu()">
                 <div></div>
@@ -218,10 +278,14 @@
                 <div></div>
             </div>
             <ul class="navigation">
-            
-                    <li><a href="#">Latest</a></li>
-                    <li><a href="#">Random</a></li>
-                
+                <div class="search-container">
+                    <input class="search" type="text" value="Search Anime..." />
+                    <button type="btn" class="search-btn">Filter</button>
+                </div>
+
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Random</a></li>
+
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
@@ -233,46 +297,127 @@
         <div class="section reverse">
             <div class="section-content">
 
-                <h2>Title 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h2>Kijin Gentoushou</h2>
+                <p>In the Edo period, there was a shrine maiden called "Itsukihime" in the mountain village of Kadono.
+                    Jinta, a young man who acts as the shrine maiden's guardian despite being a stranger, encounters a
+                    mysterious demon who speaks of the far future in the forest where he went to defeat it. From Edo to
+                    the Heisei era, this huge Japanese fantasy series follows a demon man who travels through time while
+                    continuously questioning the meaning of wielding a sword.
+
+                    (Source: Crunchyroll News, edited)
+
+                    Note: The first episode has a runtime of ~1 hour</p>
                 <button class="button1" type="button">Watch Now!!!</button>
+                <button class="button2" type="button">Details</button>
             </div>
 
             <div class="section-img">
-                <img src="https://placehold.co/600x300" alt="Title 2 Image" />
+                <img
+                    src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
 
             </div>
 
         </div>
 
 
-        <div class="section">
+        <div class="title3">
+            <div class="cont">
+                <div class="im">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/saikyou-no-ousama-nidome-no-jinsei-wa-nani-wo-suru-12d6c46c49.jpg">
+                </div>
+                <div>
+                    <h2>The Beginning After the End</h2>
+                    <p>After a mysterious death, King Grey is reborn as Arthur Leywin on the magical continent of
+                        Dicathen.
+                        Although he enters his second life as a baby, his previous wisdom remains. He begins to master
+                        magic
+                        and forge his own path as the years go by, seeking to correct the mistakes of his past life.
+                    <p>(Source: Crunchyroll)
 
-            <div class="section-img">
-                <img src="https://placehold.co/600x300" alt="Title 3 Image" />
+                        Note: The first episode premiered early on YouTube in some regions on March 30th, 2025. The
+                        original
+                        TV broadcast started on April 2nd, 2025.</p>
+                    </p>
+
+                </div>
             </div>
-            <div class="section-content">
-                <h2>Title 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div>
+                <div class="im">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/gorilla-no-kami-kara-kago-sareta-reijou-wa-ouritsu-kishidan-de-kawaigarareru-024fd64a3b.jpg">
+                </div>
+                <div>
+                    <h2>The Gorilla God’s Go-To Girl</h2>
+                    <p>Sophia, a timid daughter of a count, just wanted a peaceful life, but the Gorilla God had other
+                        plans. Blessed with unmatched strength, she’s thrust into the Royal Knight Order, turning her
+                        quiet days into chaos. Now, she must juggle school, the knight life, and her overwhelming power.
+                        Who knew gorilla strength could be so complicated?
+                    <p>(Source: Crunchyroll)</p>
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div class="bot"><button class="button3" type="button">Read Manga Now!!!</button></div>
 
         <div class="section reverse">
 
             <div class="section-content">
-                <h2>Title 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="section-img">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
+                </div>
+                <div class="card">
+                    <h2>Title 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+
             </div>
-            <div class="section-img">
-                <img src="https://placehold.co/600x300" alt="Title 4 Image" />
+            <div class="section-content">
+                <div class="section-img">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
+                </div>
+                <div class="card">
+                    <h2>Title 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
+            <div class="section-content">
+                <div class="section-img">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
+                </div>
+                <div class="card">
+                    <h2>Title 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="section-img">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
+                </div>
+                <div class="card">
+                    <h2>Title 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="section-img">
+                    <img
+                        src="https://img.animeschedule.net/production/assets/public/img/anime/jpg/default/kijin-gentoushou-da46995eb5.jpg" />
+                </div>
+                <div class="card">
+                    <h2>Title 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+
         </div>
 
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </section>
 
     <footer>
