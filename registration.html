@@ -15,9 +15,6 @@
             border-radius: 10px;
             padding: 20px;
             margin-top: 200px;
-
-
-
         }
 
         header {
@@ -29,7 +26,8 @@
             flex-direction: column;
             align-items: center;
             padding: 10px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://static.wikia.nocookie.net/webarebears/images/7/7d/Icee.png/revision/latest/scale-to-width/360?cb=20160620180135');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+                url('https://static.wikia.nocookie.net/webarebears/images/7/7d/Icee.png/revision/latest/scale-to-width/360?cb=20160620180135');
         }
 
         input[type="text"],
@@ -67,7 +65,11 @@
             width: 190px;
             margin-top: 30px;
         }
-       
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -77,25 +79,128 @@
         <h1>Registration Form:</h1>
     </header>
 
-    <section class="reg">
-        <div>
-            <input type="text" placeholder="Firstname">
-            <input type="text" placeholder="Lastname">
+    <form action="" onsubmit="return validate()">
+        <input type="text" placeholder="Firstname" id="name">
+        <span class="error" id="name-error"></span>
 
-            <div class="gender">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-            </div>
+        <input type="text" placeholder="Lastname" id="last">
+        <span class="error" id="last-error"></span>
 
-            <input type="date">
-            <input type="tel" placeholder="Contact">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+        <div class="gender">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <span class="error" id="gender-error"></span>
         </div>
-        <button type="button">Register</button>
-    </section>
+        
 
+        <input type="date" id="date">
+        <span class="error" id="date-error"></span>
+        <input type="tel" placeholder="Contact" id="con" >
+        <span class="error" id="contact-error"></span>
+        <input type="email" placeholder="Email" id="email">
+        <span class="error" id="email-error"></span>
+        <input type="text" placeholder="Username" id="user">
+        <span class="error" id="user-error"></span>
+        <input type="password" placeholder="Password" id="password">
+        <span class="error" id="pass-error"></span>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            let isValid = true;
+
+            let name = document.getElementById("name").value;
+            let last = document.getElementById("last").value;
+            let date = document.getElementById("date").value;
+            let contact = document.getElementById("con").value;
+            let email = document.getElementById("email").value;
+            let username = document.getElementById("user").value;
+            let password = document.getElementById("password").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            console.log(gender)
+            if (name === "") {
+                document.getElementById("name-error").innerHTML = "Name required";
+                isValid = false;
+            } 
+            else {
+                document.getElementById("name-error").innerHTML = "";
+            }
+
+
+            if (last === "") {
+                document.getElementById("last-error").innerHTML = "Lastname required";
+                isValid = false;
+            }
+            else {
+                document.getElementById("last-error").innerHTML = "";
+            }
+
+            if (!gender){
+                document.getElementById("gender-error").innerHTML = "Please Select Your Gender"
+            }
+          
+
+            if (date == "") {
+                document.getElementById("date-error").innerHTML = "Birthdate required";
+                isValid = false;
+            }
+            else {
+                document.getElementById("date-error").innerHTML = "";
+
+            }
+
+
+
+
+
+            if (contact == "") {
+                document.getElementById("contact-error").innerHTML = "Contact required";
+                isValid = false;
+            }
+            else if (contact.length < 11) {
+                document.getElementById("contact-error").innerHTML = "Contact Number must be atleast 11 digits"
+                isValid = false;
+            }
+            else {
+                document.getElementById("contact-error").innerHTML = "";
+
+            }
+
+            if (email == "") {
+                document.getElementById("email-error").innerHTML = "Email required";
+                isValid = false;
+            }
+            else {
+                document.getElementById("email-error").innerHTML = "";
+
+            }
+
+            if (username == "") {
+                document.getElementById("user-error").innerHTML = "Username required";
+                isValid = false;
+            }
+            else {
+                document.getElementById("user-error").innerHTML = "";
+
+            }
+
+            if (password == "") {
+                document.getElementById("pass-error").innerHTML = "Password required";
+                isValid = false;
+            }
+            else {
+                document.getElementById("pass-error").innerHTML = "";
+
+            }
+
+
+
+            return isValid;
+        }
+    </script>
 </body>
 
 </html>

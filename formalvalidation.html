@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- required, disable, readonly -->
+    <form action="" onsubmit="return validate()">
+        <label for="fname">Enter Your Name:</label>
+        <input type="text" id="fname">
+        <span id="error"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <span id="error2"></span>
+
+        <label for="password">password</label>
+        <input type="password" id="password" pattern="[a-z0-9]{8,}">
+        <span id="error3"></span>
+
+        <input type="submit" value="submit">
+        <div class="alert">
+
+       
+
+
+    </form>
+    <script>
+
+        function validate() {
+            let isValid = true;
+            let name = document.getElementById("fname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (name == "") {
+                document.getElementById("error").innerHTML = "Name required"
+                isValid = false;
+            }
+            else if (name.length < 5) {
+                document.getElementById("error").innerHTML = "Name Must be atleast 5 characters"
+                isValid = false;
+            }
+            else {
+                document.getElementById("error").innerHTML = "";
+            }
+
+
+
+
+            if (email == "") {
+                document.getElementById("error2").innerHTML = "Email requred";
+                isValid = false;
+            }
+
+
+            if (password == "") {
+                document.getElementById("error3").innerHTML = "Password required"
+                isValid == false;
+            }
+
+
+            return isValid;
+
+        }
+
+    </script>
+</body>
+
+</html>
