@@ -5,20 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .game-item{
+            color: red;
+        }
+    </style>
 </head>
+
 
 <body>
     <h1>MMO games</h1>
-    <button>Fetch API</button>
-    <ul id="gameslist">
+    <button onclick="fetchallgames()">Fetch API</button>
+    <ul id="doglist">
 
     </ul>
 
     <script>
-        function FetchAlllGames() {
-            fetch()
-                .then()
-                .then()
+        function fetchallgames(){
+                fetch("https://dogapi.dog/api/v2/breeds")
+                .then(response => response.json())
+                .then(data => {
+                    const gameslist = document.getElementById("doglist");
+                    gameslist.innerHTML = "";
+                    data.data.forEach(game => {
+                        const li = document.createElement("li");
+                        li.setAttribute("class", "game-item");
+                        li.innerHTML = game.attributes.name;
+                        gameslist.appendChild(li);
+                    });
+                })
+
+              
                 .catch()
 
 
